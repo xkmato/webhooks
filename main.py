@@ -15,11 +15,13 @@
 # limitations under the License.
 #
 import webapp2
+from crag.views import MakeCallRequestHandler
 from fbots.veiws import MainHandler
 from smsmaama.views import PregnancyDate
 
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
-    ('/preg_date', PregnancyDate)
+    ('/preg_date', PregnancyDate),
+    ('/makecallrequest', MakeCallRequestHandler)
 ], debug=True)
